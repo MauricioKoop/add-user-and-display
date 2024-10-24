@@ -16,8 +16,8 @@
                     <input type="text" name="name" id="name" placeholder="Digite seu nome">
                 </div>
                 <div class="main-form__input-group">
-                    <label for="setor"></label>
-                    <select name="setor" id="setor">
+                    <label for="sector"></label>
+                    <select name="sector" id="sector">
                         <option value="RH">Setor RH</option>
                         <option value="Armazem">Armazém</option>
                         <option value="Financeiro">Financeiro</option>
@@ -33,9 +33,12 @@
                     <label for="problem"></label>
                     <textarea name="problem" id="problem" placeholder="Relate seu problema técnico com o máximo de detalhes possíveis"></textarea>
                 </div>
-                <button id="registerOS" type="submit">Cadastrar OS</button>
+                <button type="submit">Cadastrar OS</button>
             </form>
-            <button class="listOS" id="listOS">Listar Ordens de serviço</button>
+            <button class="btnListOS" id="btnListOS">Listar Ordens de serviço</button>
+        </section>
+
+        <section class="display-OS" id="display-OS">
         </section>
     </main>
 
