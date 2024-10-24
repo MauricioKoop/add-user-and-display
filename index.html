@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Users with JS</title>
+</head>
+<body>
+    
+    <main id="main">
+        <h1>Cadastrar OS</h1>
+        <section class="main-section">
+            <form class="main-form" id="main-form">
+                <div class="main-form__input-group">
+                    <label for="name"></label>
+                    <input type="text" name="name" id="name" placeholder="Digite seu nome">
+                </div>
+                <div class="main-form__input-group">
+                    <label for="setor"></label>
+                    <select name="setor" id="setor">
+                        <option value="RH">Setor RH</option>
+                        <option value="Armazem">Armazém</option>
+                        <option value="Financeiro">Financeiro</option>
+                        <option value="Medicina do Trabalho">Medicina do Trabalho</option>
+                        <option value="Diretoria">Diretoria</option>
+                    </select>
+                </div>
+                <div class="main-form__input-group">
+                    <label for="email"></label>
+                    <input type="email" name="email" id="email" placeholder="Digite seu e-mail">
+                </div>
+                <div class="main-form__input-group">
+                    <label for="problem"></label>
+                    <textarea name="problem" id="problem" placeholder="Relate seu problema técnico com o máximo de detalhes possíveis"></textarea>
+                </div>
+                <button id="registerOS" type="submit">Cadastrar OS</button>
+            </form>
+            <button class="listOS" id="listOS">Listar Ordens de serviço</button>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
