@@ -4,6 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Users with JS</title>
+    <style>
+        .hidden {
+            display: none;
+        }
+
+        table {
+            margin-top: 100px;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
 </head>
 <body>
     
@@ -13,11 +35,11 @@
             <form class="main-form" id="main-form">
                 <div class="main-form__input-group">
                     <label for="name"></label>
-                    <input type="text" name="name" id="name" placeholder="Digite seu nome">
+                    <input type="text" name="name" id="name" placeholder="Digite seu nome" required>
                 </div>
                 <div class="main-form__input-group">
                     <label for="sector"></label>
-                    <select name="sector" id="sector">
+                    <select name="sector" id="sector" required>
                         <option value="RH">Setor RH</option>
                         <option value="Armazem">Armazém</option>
                         <option value="Financeiro">Financeiro</option>
@@ -27,20 +49,57 @@
                 </div>
                 <div class="main-form__input-group">
                     <label for="email"></label>
-                    <input type="email" name="email" id="email" placeholder="Digite seu e-mail">
+                    <input type="email" name="email" id="email" placeholder="Digite seu e-mail" required>
                 </div>
                 <div class="main-form__input-group">
                     <label for="problem"></label>
-                    <textarea name="problem" id="problem" placeholder="Relate seu problema técnico com o máximo de detalhes possíveis"></textarea>
+                    <textarea name="problem" id="problem" placeholder="Relate seu problema técnico com o máximo de detalhes possíveis" required></textarea>
                 </div>
                 <button type="submit">Cadastrar OS</button>
             </form>
             <button class="btnListOS" id="btnListOS">Listar Ordens de serviço</button>
         </section>
 
-        <section class="display-OS" id="display-OS">
-        </section>
+        <table class="display-OS hidden" id="display-OS">
+            <tr>
+                <th>Nome</th>
+                <th>Setor</th>
+                <th>E-mail</th>
+                <th>Problema</th>
+                <th>Excluir OS</th>
+                <th>Atualizar OS</th>
+            </tr>
+        </table>
     </main>
+
+    <section class="update-users-os hidden">
+        <h2 id="autualizar-os">Atualizar OS</h2>
+        <form id="update-users-form">
+            <div class="update-users-form__input-group">
+                <label for="updateName"></label>
+                <input type="text" name="updateName" id="updateName" placeholder="Atualize seu nome aqui...">
+            </div>
+            <div class="update-users-form__input-group">
+                <label for="updateSector"></label>
+                <select name="updateSector" id="updateSector">
+                    <option value="RH">Setor RH</option>
+                    <option value="Armazem">Armazém</option>
+                    <option value="Financeiro">Financeiro</option>
+                    <option value="Medicina do Trabalho">Medicina do Trabalho</option>
+                    <option value="Diretoria">Diretoria</option>
+                </select>
+            </div>
+            <div class="update-users-form__input-group">
+                <label for="updateEmail"></label>
+                <input type="email" name="updateEmail" id="updateEmail" placeholder="Atualize seu e-mail aqui...">
+            </div>
+            <div class="update-users-form__input-group">
+                <label for="updateProblem"></label>
+                <textarea name="updateProblem" id="updateProblem" placeholder="Atualize seu problema técnico com o máximo de detalhes possíveis"></textarea>
+            </div>
+            <button type="submit">Atualizar OS</button>
+        </form>
+    </section>
 
     <script src="script.js"></script>
 </body>
