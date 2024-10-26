@@ -43,8 +43,8 @@ function displayNewOs() {
                 <td>${user.sector}</td>
                 <td>${user.email}</td>
                 <td>${user.problem}</td>
-                <td><button onclick="removeUserOs(${index})">Excluir</button></td>
-                <td><button onclick="updateUserOs(${index})">Atualizar</button></td>
+                <td><button class="btn btn-danger" onclick="removeUserOs(${index})">Excluir</button></td>
+                <td><button class="btn btn-success" onclick="updateUserOs(${index})">Atualizar</button></td>
             </tr>
         `
         displayOS.insertAdjacentHTML('beforeend', userOs);
